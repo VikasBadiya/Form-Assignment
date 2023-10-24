@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cloud Vandana Survey Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5f59ca6ad3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+</head>
+
+<body>
+    <div class="bg-container">
+        <h1 class="heading">Customer Survey Form</h1>
+        <div class="form-container">
+            <form id="surveyForm">
+                <div class="filed-container">
+                    <div class="input-container">
+                        <label for="firstName" style=" text-align:start;margin-bottom:10px; font-weight:600;">First Name:</label>
+                        <input type="text" id="firstName" required style="height:50px; width:350px; border: 3px;border-style:solid; border-radius:18px; padding-left:15px;" />
+                    </div>
+                    <div class="input-container">
+                        <label style=" text-align:start;margin-bottom:10px; font-weight:600;" for="lastName">Last Name:</label>
+                        <input type="text" style="height:50px; width:350px; border: 3px;border-style:solid; border-radius:18px; padding-left:15px" id="lastName" required />
+                    </div>
+                </div>
+
+
+                <div class="filed-container">
+                    <div class="input-container">
+                        <label for="dob" style=" text-align:start;margin-bottom:10px; font-weight:600;">Date of Birth:</label>
+                        <input type="date" id="dob" style="height:50px; width:250px; border: 3px;border-style:solid; border-radius:18px; padding-left:15px" required><br>
+                    </div>
+
+
+                    <div class="input-container">
+                        <label style=" text-align:start;margin-bottom:10px; font-weight:600;">Gender:</label>
+                        <div>
+                            <input type="checkbox" id="male" name="gender" style="height:20px; width:20px; border: 3px;border-style:solid; border-radius:18px;"> Male
+                            <input type="checkbox" id="female" name="gender" style="height:20px; width:20px; border: 3px;border-style:solid; border-radius:18px;"> Female
+                            <input type="checkbox" id="other" name="gender" style="height:20px; width:20px; border: 3px;border-style:solid; border-radius:18px;"> Other<br>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="filed-container">
+                    <div class="input-container">
+                        <label for="email" style=" text-align:start;margin-bottom:10px; font-weight:600;">Email:</label>
+                        <input type="email" id="email" style="height:50px; width:350px; border: 3px;border-style:solid; border-radius:18px; padding-left:15px" required><br>
+                    </div>
+                    <div class="input-container">
+                        <label for="mobile" style=" text-align:start;margin-bottom:10px; font-weight:600;">Mobile Number:</label>
+                        <input type="tel" id="mobile" style="height:50px; width:350px; border: 3px;border-style:solid; border-radius:18px; padding-left:15px" required><br>
+                    </div>
+                </div>
+
+
+                <div class="filed-container">
+                    <div class="input-container">
+                        <label for="profession" style=" text-align:start;margin-bottom:10px; font-weight:600;">Profession:</label>
+                        <input type="text" id="profession" style="height:50px; width:350px; border: 3px;border-style:solid; border-radius:18px; padding-left:15px" required><br>
+
+                    </div>
+                    <div class="input-container">
+                        <label for="country" style=" text-align:start;margin-bottom:10px; font-weight:600;">Country:</label>
+                        <select id="country" style="height:50px; width:250px; border: 3px;border-style:solid; border-radius:18px; padding-left:15px" required>
+                            <option value="USA">USA</option>
+                            <option value="Canada">Canada</option>
+                            <option value="UK">UK</option>
+                            <!-- Add more countries as needed -->
+                        </select><br>
+                    </div>
+                </div>
+
+                <div>
+                    <button type="button" onclick="submitForm()" class="btn btn-primary">Submit</button>
+                    <button type="button" onclick="resetForm()" class="btn btn-secondary">Reset</button>
+                </div>
+            </form>
+        </div>
+        <div id="popup" style="display: none;">
+            <h2>Survey Form Data</h2>
+            <div id="popup-content"></div>
+            <button onclick="closePopup()" class="btn btn-secondary">Close</button>
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+        
+</body>
+
+</html>
